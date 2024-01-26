@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Information</title>
+</head>
+
+<body>
+    <h1>Flight Information Form</h1>
+
+    <form action="MainController" method="POST">
+        <label for="id">Flight ID:</label>
+        <input type="text" id="id" name="id" pattern="[A-Za-z0-9]{1,10}" required>
+        <!-- Mã chuyến bay có thể chứa chữ cái và số, tối đa 10 ký tự -->
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="departureTime">Departure Time:</label>
+        <input type="datetime-local" id="departureTime" name="departureTime" required>
+        <!-- Sử dụng input datetime-local để chọn ngày và giờ -->
+
+        <button type="submit" name="action" value="AddAPlane">Submit</button>
+    </form>
+</body>
+
+</html>
+
